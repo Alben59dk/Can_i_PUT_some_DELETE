@@ -1,9 +1,11 @@
-form(method="POST" action="/users/:prenom?_method=PUT")
+extends layout
 
-    h1 name form update
+block content
+  h1= title
+  form(method='POST', action='/users/' + user + '?_method=PUT')
+    input(type='text', name='user')
+    button(type='submit') Modifier
 
-    input(type="text" name="prenom" placeholder="prenom")
-
-    button(type="submit") Enregistrer
-
-
+  a(href='id') Delete user
+  br
+  a(href='/') Accueil

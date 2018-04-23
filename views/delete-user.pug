@@ -1,7 +1,11 @@
-form(method="POST" action="/users/:numero?_method=DELETE")
+extends layout
 
-	h1 name form delete
+block content
+  h1= title
+  form(method='POST', action='/users/' + id + '?_method=DELETE')
+    input(type='text', name='id')
+    button(type='submit') Supprimer
 
-	input(type="text" name="numero" placeholder="numero")
-
-	button(type="submit") Enregistrer
+  a(href='user') Update user
+  br
+  a(href='/') Accueil
